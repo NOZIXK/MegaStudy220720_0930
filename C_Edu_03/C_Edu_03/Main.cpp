@@ -16,7 +16,7 @@
 // => 제일 앞에 있는 수 : 0 -> 양수 , 1 -> 음수
 
 #include <stdio.h>
-
+#define _CRT_SECURE_NO_WARNINGS
 int main(void)
 {
 	//signed
@@ -92,6 +92,26 @@ int main(void)
 	printf("double : %d\n", sizeof(double));
 	printf("long double : %d\n", sizeof(long double));
 	printf("\n");
+
+
+	// ** 입력
+
+	int Number;
+
+	printf_s("입력 : ");
+	scanf_s("%d", &Number);
+
+	printf_s("입력 받은 값 : %d \n", Number);
+
+	int age;
+	double height;
+
+	printf_s("나이와 키를 입력하세요 : ");
+	scanf_s("%d%lf", &age, &height);
+	printf("나이는 %d살, 키는 %.lfcm입니다.\n", age, height);
+
+
+
 
 
 	return 0;
