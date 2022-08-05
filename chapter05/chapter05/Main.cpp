@@ -23,9 +23,10 @@ int main (void)
 	//		- 컵을 손에 쥔다.
 	//		- 컵에 물을 담아 마신다.
 
+
+	// ** if ~ else 문
 	{
 	
-		char* Name;
 		int Number;
 
 		printf("입력 : ");
@@ -33,38 +34,78 @@ int main (void)
 
 		if (Number == 1)
 		{
-			Name = (char*)"홍길동";
+			printf("홍길동");
 		}
 		else if (Number == 2)
 		{
-			Name = (char*)"임꺽정";
+			printf("임꺽정");
+		}
+		else if (Number == 3)
+		{
+			printf("이몽룡");
 		}
 		else
 		{
-			Name = (char*)"이몽룡";
+			printf("잘못입력했습니다.");
+		}
+		printf("\n\n");
+	}
+
+
+	// ** witch ~ case 문
+	{
+
+		int Number;
+
+		printf("입력 : ");
+		scanf_s("%d", &Number);
+		
+
+		switch (Number)
+		{
+		case 1:
+			printf("홍길동");
+			break;
+		case 2:
+			printf("임꺽정");
+			break;
+		case 3:
+			printf("이몽룡");
+			break;
+
+		default:
+			printf("잘못 입력 하였습니다");
 		}
 
-		printf("결과 값 : %s", Name);
-		printf("\n");
+		printf("\n\n");
+		
 	}
+
+
+	
+
+
+
+
+
 
 
 
 	/*
-	char Answer;
+	int Answer;
 	printf("물을 마시러 정수기 앞으로 간다 \n");
-	printf("컵이 있다 : 예\n");
-	printf("컵이 없다 : 아니오\n");
+	printf("컵이 있다 : 1\n");
+	printf("컵이 없다 : 2\n");
 	printf("정수기 앞에 컵이 있는가?");
 	scanf_s("%d", &Answer);
 
-	if (Answer == "아니요")
+	if (Answer == 2)
 	{
 		printf_s("정수기 앞에 컵이 없으니 인포에 가서 컵을 받아오자.\n");
 
 		
 	}
-	else if (Answer == "예")
+	else if (Answer == 1)
 	{
 		printf("컵이 있다.\n");
 	}
